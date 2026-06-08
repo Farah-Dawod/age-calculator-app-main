@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root{
+      --Purple: hsl(259, 100%, 65%);
+      --Red: hsl(0, 100%, 67%);
+     --bg: hsl(0, 0%, 94%);
+     --White: hsl(0, 100%, 100%);
+
+    }
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+       /* mobile*/
+    body{
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      /* margin: auto; */
+
+    }
+    .calculator{
+      background-color: var(--White);
+      margin-top: 5.625rem;
+      border-radius: 1.25rem;
+        margin: 5.625rem 0.9375rem 0;  /* top | left&right | bottom */
+
+      border-bottom-right-radius: 5.625rem;
+      padding: 1.875rem;
+    }
+   .age { 
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  
+
+   }
+   .age input{
+    height: 3rem;
+    width: 5rem;
+    margin: 1.5625rem;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+
+   }
+   .age input:focus-visible{
+    outline: hsl(0, 1%, 44%);
+   }
+   .age input:hover{
+    border-color: var(--Purple);
+   }
+   .age p{
+    color: hsl(0, 1%, 44%);
+    font-size: 2rem;
+   }
+   .icon button{
+     background-color: var(--Purple);
+     border-radius: 50%;
+     height: 4.375rem;
+     padding: 0.9375rem;
+     border: none;
+     margin: auto;
+     margin-top: 10px;
+     margin-inline-start: 1.375rem;
+     transform: translate(5.25rem,-2rem);
+   }
+  
+   .icon button:hover{
+    background-color: hsl(0, 0%, 0%);
+
+   }
+.Age-calculator{
+  text-align: left;
+  margin-left: 4.375rem;
+}
+.Age-calculator p{
+  font-size: 2.6rem;
+  
+}
+.Age-calculator span{
+  color:var(--Purple) ;
+}
+.notvalid{
+border: 3px solid var(--Red)!important;
+}
+.error {
+    color: var(--Red)!important;
+}
+.error-msg{
+    display: none;
+      color: hsla(0, 100%, 67%, 0.689)!important;
+      font-size: 0.75rem !important;
+      font-weight: bold;
+      padding-bottom: 40px;
+}
+hr{
+  margin-top: 60px;
+}
+
+/* Large screen*/
+@media (min-width: 24.4375rem) {
+  .icon button{
+    margin-inline-start: 450px;
+  }
+  .calculator{
+   text-align: center;
+  margin-left: auto;
+  margin-right: auto; 
+  margin-top: 1.875rem;
+  max-width: 31.25rem; 
+  /* max-height: 31.25rem;  */
+
+  }
+  .Age-calculator{
+    transform: translatey(-3.75rem);
+  }
+  
+  .Age-calculator p{
+  font-size: 5rem;
+}
+.age input{
+    height: 3rem;
+    width: 7rem;}
+
+}
+  </style>
+</head>
+<body>
+<main>
+  <div class="calculator">
+    <div class="age">
+      <div class="day">
+        <p>Day</p>
+        <input type="text" class="DD" placeholder="DD">
+        <p class="error-msg ">Must be a valid day</p>
+      </div>
+     <div class="month">
+      <p>Month</p>
+       <input type="text" class="MM" placeholder="MM">
+       <p class="error-msg ">Must be a valid Month </p>
+
+     </div>
+      <div class="year">
+        <p>Year</p>
+          <input type="text" class="YYYY" placeholder=" YYYY">
+           <p class="error-msg ">Must be a valid Year </p>
+
+
+      </div>
+    </div>
+    <hr>
+    <div class="icon">
+      <button type="button" class="btn"><img src="assets/images/icon-arrow.svg" alt="icon-arrow"></button>
+    </div>
+    <div class="Age-calculator">
+      <div class="y">
+      <p><span>--</span>years</p> 
+      </div>
+      <div class="m">
+              <p><span>--</span>months</p> 
+      </div>
+      <div class="d">
+       <p><span>--</span>days</p> 
+
+      </div>
+    </div>
+  </div>
+</main>
+
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Farah Ahmed Dawod</a>.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
